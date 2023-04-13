@@ -6,10 +6,15 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import lombok.RequiredArgsConstructor;
+
 @Service
+@RequiredArgsConstructor
 public class ServicioAlumnos {
 
+	
 	@Autowired // Autowired satisface la dependecia que tiene ServicioAlumnos de AlmacenAlumnos
+	//@Qualifier("almacenAlumnosMemoria")
 	private AlmacenAlumnos almacenAlumnos;
 
 	/**
